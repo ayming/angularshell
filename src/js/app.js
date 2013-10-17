@@ -3,7 +3,7 @@
   'use strict';
 
   $(function () {
-    // FireShell
+    // AngularShell
   });
 
 })(jQuery, window, document);

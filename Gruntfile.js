@@ -28,7 +28,7 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   /**
-   * FireShell Grunt config
+   * AngularShell Grunt config
    */
   grunt.initConfig({
 
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
     concat: {
       dev: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.assets %>/js/app.js': '<%= project.js %>'
         }
       },
       options: {
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.assets %>/js/scripts.min.js'
+          '<%= project.assets %>/js/app.js': '<%= project.assets %>/js/app.js'
         }
       }
     },
@@ -142,7 +142,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>'
+          '<%= project.assets %>/js/app.js': '<%= project.js %>'
         }
       }
     },
