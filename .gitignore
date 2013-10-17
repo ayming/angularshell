@@ -5,4 +5,4 @@
 node_modules
 .sass-cache
 style.min.css
-scripts.min.js
+app.js
