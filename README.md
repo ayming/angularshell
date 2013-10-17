@@ -11,16 +11,16 @@ Get started with AngularShell:
 
 ## Documentation
 
-FireShell - https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md
-Grunt - http://gruntjs.com/getting-started
-HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
-JSHint - https://github.com/gruntjs/grunt-contrib-jshint
-Uglify - https://github.com/gruntjs/grunt-contrib-uglify
-Liveload - https://github.com/gruntjs/grunt-contrib-connect
-Concat - https://github.com/gruntjs/grunt-contrib-concat
-ngmin - https://github.com/btford/grunt-ngmin
-Sass - https://github.com/gruntjs/grunt-contrib-sass
-grunt-open - https://github.com/jsoverson/grunt-open
+ * FireShell - https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md
+ * Grunt - http://gruntjs.com/getting-started
+ * HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
+ * JSHint - https://github.com/gruntjs/grunt-contrib-jshint
+ * Uglify - https://github.com/gruntjs/grunt-contrib-uglify
+ * Liveload - https://github.com/gruntjs/grunt-contrib-connect
+ * Concat - https://github.com/gruntjs/grunt-contrib-concat
+ * ngmin - https://github.com/btford/grunt-ngmin
+ * Sass - https://github.com/gruntjs/grunt-contrib-sass
+ * grunt-open - https://github.com/jsoverson/grunt-open
 
 ## Scaffolding
 
