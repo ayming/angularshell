@@ -60,6 +60,40 @@ Get started with AngularShell:
 └── .travis.yml
 ````
 
+## About ngmin
+
+[ngmin](https://github.com/btford/ngmin) is an AngularJS application pre-minifier but it does not currently attempt to be fully generalized, and might not work. There are some points you must be careful.
+
+#### Something should be work
+
+```javascript
+someModule.controller('myCtrl', function ($scope) {});
+someModule.service('myService', function ($scope) {});
+someModule.factory('myFactory', function (a) {});
+```
+
+#### Something is temporarily not working
+
+```javascript
+// incorrect
+someModule.config(function (a) {});
+// correct
+someModule.config(['a', function (a) {}]);
+
+// incorrect
+someModule.run(function (a) {});
+// correct
+someModule.run(['a', function (a) {}]);
+
+// incorrect
+function SomeCtrl($scope) {}
+// correct
+function SomeCtrl($scope) {}
+SomeCtrl.$inject = ['$scope'];
+```
+
+To know more about angular minification, please take a look at the [document](http://docs.angularjs.org/tutorial/step_05).
+
 ## License
 
 #### The MIT License (MIT)
