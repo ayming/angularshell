@@ -1,76 +1,53 @@
-# FireShell [![Build Status](https://travis-ci.org/toddmotto/fireshell.png)](https://travis-ci.org/toddmotto/fireshell)
+# AngularShell
 
-Fiercely quick front-end boilerplate and workflows.
-
-The opinionated FireShell framework. Built for the modern developer. For teams and the individual, encouraging a better workflow. JavaScript task running, build processes, autominification and file concatenation, wrapped with an enhanced HTML5 boilerplated framework.
-
-* Source: [github.com/toddmotto/fireshell](http://github.com/toddmotto/fireshell)
-* Homepage: [getfireshell.com](http://getfireshell.com)
-* Twitter: [@getfireshell](http://twitter.com/getfireshell)
+AngularShell is a AngularJS [FireShell](https://github.com/toddmotto/fireshell) build.
 
 ## Jump start
 
-Get started with FireShell:
+Get started with AngularShell:
 
-1. Download the latest stable release from
-   [getfireshell.com](http://getfireshell.com).
-2. Clone the git repo — `git clone
-   https://github.com/toddmotto/fireshell.git`
-
-## Platform support
-
-FireShell runs on both Mac OS X, Linux and Windows. Automated command-line scripts are only supported on Mac OS X and Windows.
+1. Read the [installation guide](https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md#project-setup-and-grunt-installation)
+2. Clone the git repo — `git clone https://github.com/ayming/angularshell.git`
 
 ## Documentation
 
-Read the developer [documentation](//github.com/toddmotto/fireshell/blob/master/docs/DOCS.md) on FireShell for further reading and learning. You may need to install a few assets before you can get started, such as Node, Git, Grunt.
-
-## Features
-
-Here are some of the main features of FireShell:
-
-* HTML5 framework, WAI-ARIA roles and HTML5 semantics
-* Baseline HTML5 features, DNS prefetching, responsive meta
-* Encourages one-file CSS/JS in the view (HTML) for performance
-* Includes jQuery CDN and relative fallback
-* Includes Modernizr and HTML5 Shiv
-* Google Universal Analytics snippet
-* Open source workflow with Grunt.js running on Node.js
-* Two `.command` (Mac OS X) and `.bat` (Windows) files for double-click command-line execution of FireShell
-* Automatic Grunt dependency installation, directory relocation and grunt tasks
-* Dynamically appended copyright for JS/CSS
-* Livereloading the browser and file injection upon changes
-* Annotated Gruntfile.js for extending
-* Built-in build script for auto-minification of CSS and JavaScript files for production
-* Pre-setup Sass/SCSS files and folders for baseline project structure and imports
-* Includes .editorconfig for consistent coding styles in IDEs
-* Standard .gitignore to ignore minified files and standard ignorables such as .DS_Store
-* JSHint .jshintrc file for configuring JavaScript linting
-* No superfluous code comments
-* Extremely lightweight footprint
+FireShell - https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md
+Grunt - http://gruntjs.com/getting-started
+HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
+JSHint - https://github.com/gruntjs/grunt-contrib-jshint
+Uglify - https://github.com/gruntjs/grunt-contrib-uglify
+Liveload - https://github.com/gruntjs/grunt-contrib-connect
+Concat - https://github.com/gruntjs/grunt-contrib-concat
+ngmin - https://github.com/btford/grunt-ngmin
+Sass - https://github.com/gruntjs/grunt-contrib-sass
+grunt-open - https://github.com/jsoverson/grunt-open
 
 ## Scaffolding
 
 ````
 ├── app
-│   ├── apple-touch-icon-precomposed.png
 │   ├── assets
 │   │   ├── css
 │   │   ├── fonts
 │   │   ├── img
-│   │   └── js
+│   │   ├── js
+│   │   └── partials
+│   ├── vendor
 │   ├── favicon.ico
 │   └── index.html
 ├── src
 │   ├── js
-│   │   └── scripts.js
+│   │   ├── controllers
+│   │   ├── directives
+│   │   ├── filters
+│   │   ├── services
+│   │   └── app.js
 │   └── scss
 │       ├── mixins
 │       ├── modules
 │       ├── partials
 │       ├── vendor
 │       └── style.scss
-├── docs
 ├── grunt-build.command
 ├── grunt-build.bat
 ├── grunt-dev.command
@@ -83,28 +60,11 @@ Here are some of the main features of FireShell:
 └── .travis.yml
 ````
 
-## Roadmap
-
-Projected roadmap for FireShell and it's subsets builds.
-
-* Integrate Grunt-init to allow for initial project naming (for dynamic CSS/JS banners)
-* LESS.css variant (`less` dir inside `src`), keeping Sass as default but providing Gruntfile.js setup
-* AngularJS FireShell build with MVC scaffolding
-* Bower as package manager
-* Static HTML Includes FireShell build (emulates server-side includes)
-* PHP FireShell spawning a `localhost` with relevant includes
-* Create a Yeoman generator for FireShell
-* Add [grunt-autoprefixer](//github.com/nDmitry/grunt-autoprefixer) in place of `vendor` Sass mixin.
-
-## Contributors
-
-FireShell is maintained by [Todd Motto](//github.com/toddmotto) and it's contributors; [Jean-Philippe Sirois](//github.com/jpsirois), [Noah Bass](//github.com/noahbass), [Bernard Chhun](//github.com/bchhun), [Chris Missal](//github.com/ChrisMissal), [Mihai Ionut Vilcu](//github.com/ionutvmi), [Octavio Amuchastegui](//github.com/octavioamu).
-
 ## License
 
 #### The MIT License (MIT)
 
-Copyright (c) FireShell
+Copyright (c) AngularShell
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -123,3 +83,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Release History
+
+ * 2013-10-17   v0.0.1   Work in progress.
