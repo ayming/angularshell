@@ -86,12 +86,27 @@ module.exports = function (grunt) {
     },
 
     /**
+     * Clean files and folders
+     * https://github.com/gruntjs/grunt-contrib-clean
+     * Remove generated files for clean deploy
+     */
+    clean: {
+      dist: [
+        '<%= project.assets %>/css/style.unprefixed.css',
+        '<%= project.assets %>/css/style.prefixed.css'
+      ]
+    },
+
+    /**
      * JSHint
      * https://github.com/gruntjs/grunt-contrib-jshint
      * Manage the options inside .jshintrc file
      */
     jshint: {
-      files: ['src/js/*.js'],
+      files: [
+        'src/js/*.js',
+        'Gruntfile.js'
+      ],
       options: {
         jshintrc: '.jshintrc'
       }
@@ -122,11 +137,11 @@ module.exports = function (grunt) {
      */
     uglify: {
       options: {
-        banner: "<%= tag.banner %>"
+        banner: '<%= tag.banner %>'
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/app.js': '<%= project.assets %>/js/app.js'
+          '<%= project.assets %>/js/app.js': '<%= project.js %>'
         }
       }
     },
@@ -159,7 +174,7 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.assets %>/css/style.unprefixed.css': '<%= project.css %>'
         }
       },
       dist: {
@@ -168,8 +183,79 @@ module.exports = function (grunt) {
           banner: '<%= tag.banner %>'
         },
         files: {
-          '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
+          '<%= project.assets %>/css/style.unprefixed.css': '<%= project.css %>'
         }
+      }
+    },
+
+    /**
+     * Autoprefixer
+     * Adds vendor prefixes automatically
+     * https://github.com/nDmitry/grunt-autoprefixer
+     */
+    autoprefixer: {
+      options: {
+        browsers: [
+          'last 2 version',
+          'safari 6',
+          'ie 9',
+          'opera 12.1',
+          'ios 6',
+          'android 4'
+        ]
+      },
+      dev: {
+        files: {
+          '<%= project.assets %>/css/style.min.css': ['<%= project.assets %>/css/style.unprefixed.css']
+        }
+      },
+      dist: {
+        files: {
+          '<%= project.assets %>/css/style.prefixed.css': ['<%= project.assets %>/css/style.unprefixed.css']
+        }
+      }
+    },
+
+    /**
+     * CSSMin
+     * CSS minification
+     * https://github.com/gruntjs/grunt-contrib-cssmin
+     */
+    cssmin: {
+      dev: {
+        options: {
+          banner: '<%= tag.banner %>'
+        },
+        files: {
+          '<%= project.assets %>/css/style.min.css': [
+            '<%= project.src %>/components/normalize-css/normalize.css',
+            '<%= project.assets %>/css/style.unprefixed.css'
+          ]
+        }
+      },
+      dist: {
+        options: {
+          banner: '<%= tag.banner %>'
+        },
+        files: {
+          '<%= project.assets %>/css/style.min.css': [
+            '<%= project.src %>/components/normalize-css/normalize.css',
+            '<%= project.assets %>/css/style.prefixed.css'
+          ]
+        }
+      }
+    },
+
+    /**
+     * Build bower components
+     * https://github.com/yatskevich/grunt-bower-task
+     */
+    bower: {
+      dev: {
+        dest: '<%= project.assets %>/components/'
+      },
+      dist: {
+        dest: '<%= project.assets %>/components/'
       }
     },
 
@@ -196,7 +282,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
-        tasks: ['sass:dev']
+        tasks: ['sass:dev', 'cssmin:dev', 'autoprefixer:dev']
       },
       livereload: {
         options: {
@@ -218,6 +304,9 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('default', [
     'sass:dev',
+    'bower:dev',
+    'autoprefixer:dev',
+    'cssmin:dev',
     'jshint',
     'concat:dev',
     'connect:livereload',
@@ -232,6 +321,10 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('build', [
     'sass:dist',
+    'bower:dist',
+    'autoprefixer:dist',
+    'cssmin:dist',
+    'clean:dist',
     'jshint',
     'ngmin',
     'uglify'
