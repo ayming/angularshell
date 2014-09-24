@@ -13,14 +13,20 @@ Get started with AngularShell:
 
  * FireShell - https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md
  * Grunt - http://gruntjs.com/getting-started
+ * Bower - http://bower.io
  * HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
+ * Watch - https://github.com/gruntjs/grunt-contrib-watch
  * JSHint - https://github.com/gruntjs/grunt-contrib-jshint
  * Uglify - https://github.com/gruntjs/grunt-contrib-uglify
- * Liveload - https://github.com/gruntjs/grunt-contrib-connect
+ * Livereload - https://github.com/gruntjs/grunt-contrib-connect
  * Concat - https://github.com/gruntjs/grunt-contrib-concat
  * ngmin - https://github.com/btford/grunt-ngmin
  * Sass - https://github.com/gruntjs/grunt-contrib-sass
- * grunt-open - https://github.com/jsoverson/grunt-open
+ * Open - https://github.com/jsoverson/grunt-open
+ * Autoprefixer - https://github.com/nDmitry/grunt-autoprefixer
+ * cssmin - https://github.com/gruntjs/grunt-contrib-cssmin
+ * Clean - https://github.com/gruntjs/grunt-contrib-clean
+ * Matchdep - https://github.com/tkellen/node-matchdep
 
 ## Scaffolding
 
@@ -32,7 +38,7 @@ Get started with AngularShell:
 │   │   ├── img
 │   │   ├── js
 │   │   └── partials
-│   ├── vendor
+│   ├── apple-touch-icon-precomposed.png
 │   ├── favicon.ico
 │   └── index.html
 ├── src
@@ -48,6 +54,7 @@ Get started with AngularShell:
 │       ├── partials
 │       ├── vendor
 │       └── style.scss
+├── docs
 ├── grunt-build.command
 ├── grunt-build.bat
 ├── grunt-dev.command
@@ -67,23 +74,23 @@ Get started with AngularShell:
 #### Something should be work
 
 ```javascript
-someModule.controller('myCtrl', function ($scope) {});
-someModule.service('myService', function ($scope) {});
-someModule.factory('myFactory', function (a) {});
+someModule.controller('myCtrl', function($scope) {});
+someModule.service('myService', function($scope) {});
+someModule.factory('myFactory', function(a) {});
 ```
 
 #### Something is temporarily not working
 
 ```javascript
 // incorrect
-someModule.config(function (a) {});
+someModule.config(function(a) {});
 // correct
-someModule.config(['a', function (a) {}]);
+someModule.config(['a', function(a) {}]);
 
 // incorrect
-someModule.run(function (a) {});
+someModule.run(function(a) {});
 // correct
-someModule.run(['a', function (a) {}]);
+someModule.run(['a', function(a) {}]);
 
 // incorrect
 function SomeCtrl($scope) {}
@@ -120,4 +127,5 @@ SOFTWARE.
 
 ## Release History
 
+ * 2014-09-23   v0.1.1   Add bower support.
  * 2013-10-17   v0.0.1   Work in progress.
