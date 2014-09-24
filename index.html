@@ -28,37 +28,164 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h1>
+<a name="angularshell" class="anchor" href="#angularshell"><span class="octicon octicon-link"></span></a>AngularShell</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>AngularShell is a AngularJS <a href="https://github.com/toddmotto/fireshell">FireShell</a> build.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h2>
+<a name="jump-start" class="anchor" href="#jump-start"><span class="octicon octicon-link"></span></a>Jump start</h2>
+
+<p>Get started with AngularShell:</p>
+
+<ol>
+<li>Read the <a href="https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md#project-setup-and-grunt-installation">installation guide</a>
+</li>
+<li>Clone the git repo — <code>git clone https://github.com/ayming/angularshell.git</code>
+</li>
+</ol><h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<ul>
+<li>FireShell - <a href="https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md">https://github.com/toddmotto/fireshell/blob/master/docs/DOCS.md</a>
+</li>
+<li>Grunt - <a href="http://gruntjs.com/getting-started">http://gruntjs.com/getting-started</a>
+</li>
+<li>Bower - <a href="http://bower.io">http://bower.io</a>
+</li>
+<li>HTML5 Boilerplate - <a href="https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md">https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md</a>
+</li>
+<li>Watch - <a href="https://github.com/gruntjs/grunt-contrib-watch">https://github.com/gruntjs/grunt-contrib-watch</a>
+</li>
+<li>JSHint - <a href="https://github.com/gruntjs/grunt-contrib-jshint">https://github.com/gruntjs/grunt-contrib-jshint</a>
+</li>
+<li>Uglify - <a href="https://github.com/gruntjs/grunt-contrib-uglify">https://github.com/gruntjs/grunt-contrib-uglify</a>
+</li>
+<li>Livereload - <a href="https://github.com/gruntjs/grunt-contrib-connect">https://github.com/gruntjs/grunt-contrib-connect</a>
+</li>
+<li>Concat - <a href="https://github.com/gruntjs/grunt-contrib-concat">https://github.com/gruntjs/grunt-contrib-concat</a>
+</li>
+<li>ngmin - <a href="https://github.com/btford/grunt-ngmin">https://github.com/btford/grunt-ngmin</a>
+</li>
+<li>Sass - <a href="https://github.com/gruntjs/grunt-contrib-sass">https://github.com/gruntjs/grunt-contrib-sass</a>
+</li>
+<li>Open - <a href="https://github.com/jsoverson/grunt-open">https://github.com/jsoverson/grunt-open</a>
+</li>
+<li>Autoprefixer - <a href="https://github.com/nDmitry/grunt-autoprefixer">https://github.com/nDmitry/grunt-autoprefixer</a>
+</li>
+<li>cssmin - <a href="https://github.com/gruntjs/grunt-contrib-cssmin">https://github.com/gruntjs/grunt-contrib-cssmin</a>
+</li>
+<li>Clean - <a href="https://github.com/gruntjs/grunt-contrib-clean">https://github.com/gruntjs/grunt-contrib-clean</a>
+</li>
+<li>Matchdep - <a href="https://github.com/tkellen/node-matchdep">https://github.com/tkellen/node-matchdep</a>
+</li>
+</ul><h2>
+<a name="scaffolding" class="anchor" href="#scaffolding"><span class="octicon octicon-link"></span></a>Scaffolding</h2>
+
+<pre><code>├── app
+│   ├── assets
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── img
+│   │   ├── js
+│   │   └── partials
+│   ├── apple-touch-icon-precomposed.png
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── js
+│   │   ├── controllers
+│   │   ├── directives
+│   │   ├── filters
+│   │   ├── services
+│   │   └── app.js
+│   └── scss
+│       ├── mixins
+│       ├── modules
+│       ├── partials
+│       ├── vendor
+│       └── style.scss
+├── docs
+├── grunt-build.command
+├── grunt-build.bat
+├── grunt-dev.command
+├── grunt-dev.bat
+├── package.json
+├── README.md
+├── .editorconfig
+├── .gitignore
+├── .jshintrc
+└── .travis.yml
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>
+<a name="about-ngmin" class="anchor" href="#about-ngmin"><span class="octicon octicon-link"></span></a>About ngmin</h2>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p><a href="https://github.com/btford/ngmin">ngmin</a> is an AngularJS application pre-minifier but it does not currently attempt to be fully generalized, and might not work. There are some points you must be careful.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h4>
+<a name="something-should-be-work" class="anchor" href="#something-should-be-work"><span class="octicon octicon-link"></span></a>Something should be work</h4>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<div class="highlight highlight-javascript"><pre><span class="nx">someModule</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">'myCtrl'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{});</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s1">'myService'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{});</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">'myFactory'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{});</span>
+</pre></div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h4>
+<a name="something-is-temporarily-not-working" class="anchor" href="#something-is-temporarily-not-working"><span class="octicon octicon-link"></span></a>Something is temporarily not working</h4>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<div class="highlight highlight-javascript"><pre><span class="c1">// incorrect</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{});</span>
+<span class="c1">// correct</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">config</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{}]);</span>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<span class="c1">// incorrect</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{});</span>
+<span class="c1">// correct</span>
+<span class="nx">someModule</span><span class="p">.</span><span class="nx">run</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{}]);</span>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<span class="c1">// incorrect</span>
+<span class="kd">function</span> <span class="nx">SomeCtrl</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{}</span>
+<span class="c1">// correct</span>
+<span class="kd">function</span> <span class="nx">SomeCtrl</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{}</span>
+<span class="nx">SomeCtrl</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$scope'</span><span class="p">];</span>
+</pre></div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>To know more about angular minification, please take a look at the <a href="http://docs.angularjs.org/tutorial/step_05">document</a>.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<h4>
+<a name="the-mit-license-mit" class="anchor" href="#the-mit-license-mit"><span class="octicon octicon-link"></span></a>The MIT License (MIT)</h4>
+
+<p>Copyright (c) AngularShell</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+<h2>
+<a name="release-history" class="anchor" href="#release-history"><span class="octicon octicon-link"></span></a>Release History</h2>
+
+<ul>
+<li>2014-09-23   v0.1.1   Add bower support.</li>
+<li>2013-10-17   v0.0.1   Work in progress.</li>
+</ul>
         </section>
 
         <aside id="sidebar">
